@@ -1,0 +1,13 @@
+name: Runner availability test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate runner allocation
+        run: |
+          echo "GitHub-hosted runner acquired."
+          uname -a
